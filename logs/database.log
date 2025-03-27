@@ -2469,3 +2469,27 @@ ALTER TABLE `tabtest` ADD COLUMN `test` varchar(140)
 alter table `tabDocType` add column if not exists migration_hash varchar(140)
 2025-03-26 16:47:07,009 WARNING database DDL Query made to DB:
 alter table `tabDocType` add column if not exists migration_hash varchar(140)
+2025-03-26 18:48:34,948 WARNING database DDL Query made to DB:
+ALTER TABLE `tabtest` ADD COLUMN `test_image` text
+2025-03-26 19:29:59,302 WARNING database DDL Query made to DB:
+create table `tabtest1` (
+			name varchar(140) primary key,
+			creation datetime(6),
+			modified datetime(6),
+			modified_by varchar(140),
+			owner varchar(140),
+			docstatus int(1) not null default '0',
+			idx int(8) not null default '0',
+			`_user_tags` text,
+`_comments` text,
+`_assign` text,
+`_liked_by` text,
+index modified(modified))
+			ENGINE=InnoDB
+			ROW_FORMAT=DYNAMIC
+			CHARACTER SET=utf8mb4
+			COLLATE=utf8mb4_unicode_ci
+2025-03-26 19:30:13,994 WARNING database DDL Query made to DB:
+ALTER TABLE `tabtest1` ADD COLUMN `profile_image` text
+2025-03-27 10:25:21,558 WARNING database DDL Query made to DB:
+ALTER TABLE `tabtest1` ADD COLUMN `companylogo` varchar(140)
